@@ -12,7 +12,11 @@ You will find the videos and codes in the same folder (master branch).
 
 ## 2. Flatmates-Bill
 
-  Describtion here
+  An app that gets as input amout of a bill for a practicular period 
+and the days that each of the flatmates stayed in the house for that period
+and returns how much each flatmates has to pay. It also generates a PDF report stating
+the name of the flatmates, the period.
+
   
 ## 3. Project Math Painting
 
