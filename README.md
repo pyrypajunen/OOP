@@ -1,3 +1,2 @@
-# OOP
-
-Advanced Python training (just for fun)
+# OOP   
+This is my Python OOP portfolio. 

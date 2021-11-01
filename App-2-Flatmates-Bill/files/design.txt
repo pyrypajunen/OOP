@@ -1,15 +1,20 @@
+This is only for programmer use.
+
 Title: Flatmates Bill
-Description: An app that gets as input the amount of a bill for a particular period
-and the     days that each of the flatmates stayed in the house for that period
-and returns how much each flatmate has to pay. It also generates a PDF report
-stating the names of the flatmates, the period, and how much each of them had to pay.
-Objects: Bill:
-            amount
-            period
-         Flatmate:
-            name
-            days_in_house
+
+Description: An app that gets as input amout of a bill for a practicular period 
+and the days that each of the flatmates stayed in the house for that period
+and returns how much each flatmates has to pay. It also generates a PDF report stating
+the name of the flatmates, the period.
+
+Objects: Bill: 
+            amount, -> float
+            period, -> int
+        Flatemate:
+            name, -> string
+            days_in_house, - > int
             pays(bill)
-         PdfReport:
-            filename
-            generate(flatmate1, flatmate2, bill)
+        PdfReport:
+            filename -> string
+            generate(flatmate1, flatmate2, bill, period)
+
