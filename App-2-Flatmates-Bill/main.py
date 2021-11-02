@@ -63,15 +63,23 @@ class PdfGenerator:
         
         # Open PDF file automatically
         webbrowser.open(self.filename  + "_" + bill.period + ".pdf")
+    
+#Inputs    
+bill_amount = int(input("Hello user, enter the bill amount: "))
+user_period = input("What is the bill period? E.g. January 2021 ")
+person = input("What is your name? ")
+person2 = input("What is your flatmate's name? ")
+stay_in_house1 = int(input(f"How many days did {person} stay in the house during the bill period? "))
+stay_in_house2 = int(input(f"How many days did {person2} stay in the house during the bill period? "))
+gived_filename = input("Give a filename: ")
 
-        
-the_bill = Bill(amount=50, period="January 2021")
-lennart = Flatmate(name ="Lennart", days_in_house = 30)
-adele = Flatmate(name ="Adele", days_in_house = 23)
+the_bill = Bill(amount= bill_amount, period= user_period)
+flat_mate = Flatmate(name = person, days_in_house = stay_in_house1)
+flat_mate2 = Flatmate(name = person2, days_in_house = stay_in_house2)
 
-print("lennart pays:",lennart.pays(bill = the_bill, flatmate2 = adele))
-print("Adele pays:", adele.pays(bill = the_bill, flatmate2 = lennart))
+print("flat_mate pays:",flat_mate.pays(bill = the_bill, flatmate2 = flat_mate2))
+print("flat_mate2 pays:", flat_mate2.pays(bill = the_bill, flatmate2 = flat_mate))
 
 
-pdf_generator = PdfGenerator(filename = "report") #Write only filename(Do not write filename.filetype)
-pdf_generator.generate(flatmate = lennart, flatmate2 = adele, bill = the_bill)
+pdf_generator = PdfGenerator(filename = gived_filename)
+pdf_generator.generate(flatmate = flat_mate, flatmate2 = flat_mate2, bill = the_bill)
