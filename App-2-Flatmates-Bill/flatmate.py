@@ -40,7 +40,7 @@ class PdfGenerator:
         pdf.add_page()
         
         # Add Image
-        pdf.image("App-2-Flatmates-Bill\house.png", w=30, h=30)
+        pdf.image(r"App-2-Flatmates-Bill\house.png", w=30, h=30)
         
         # Formating PDF
         pdf.set_font(family="Times", size =24, style="B")
@@ -65,21 +65,19 @@ class PdfGenerator:
         webbrowser.open(self.filename  + "_" + bill.period + ".pdf")
     
 #Inputs    
-bill_amount = int(input("Hello user, enter the bill amount: "))
+bill_amount = int(input("Hello user, enter the bill amount: ")) 
 user_period = input("What is the bill period? E.g. January 2021 ")
 person = input("What is your name? ")
 person2 = input("What is your flatmate's name? ")
 stay_in_house1 = int(input(f"How many days did {person} stay in the house during the bill period? "))
 stay_in_house2 = int(input(f"How many days did {person2} stay in the house during the bill period? "))
-gived_filename = input("Give a filename: ")
 
 the_bill = Bill(amount= bill_amount, period= user_period)
 flat_mate = Flatmate(name = person, days_in_house = stay_in_house1)
 flat_mate2 = Flatmate(name = person2, days_in_house = stay_in_house2)
 
-print("flat_mate pays:",flat_mate.pays(bill = the_bill, flatmate2 = flat_mate2))
-print("flat_mate2 pays:", flat_mate2.pays(bill = the_bill, flatmate2 = flat_mate))
+print(f"{person} pays:",flat_mate.pays(bill = the_bill, flatmate2 = flat_mate2))
+print(f"{person2} pays:", flat_mate2.pays(bill = the_bill, flatmate2 = flat_mate))
 
-
-pdf_generator = PdfGenerator(filename = gived_filename)
+pdf_generator = PdfGenerator(filename = f"{user_period}.pdf")
 pdf_generator.generate(flatmate = flat_mate, flatmate2 = flat_mate2, bill = the_bill)
