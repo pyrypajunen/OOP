@@ -32,20 +32,8 @@ class Rectangle:
         
     def draw(self, canvas):
         """ Draws into the canvas"""
-        canvas.data[self.x: self.x + self.height, self.y:: self.y + self.width] = self.color
-    
-class Circle:
-    
-    def __init__(self,x, y, z, color):
-        self.x = x
-        self.y = y
-        self.z = z
-        self.color = color
-        
-    def draw(self, color):
-        pass
-    
-
+        canvas.data[self.x: self.x + self.height, self.y: self.y + self.width] = self.color
+       
 class Square:
     
     def __init__(self, x, y, side , color):
@@ -56,4 +44,4 @@ class Square:
         
     def draw(self, canvas):
         """ Draws into the canvas"""
-        canvas.data[self.x: self.x + self.side, self.y:: self.y + self.side] = self.color
+        canvas.data[self.x: self.x + self.side, self.y: self.y + self.side] = self.color
