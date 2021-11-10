@@ -28,7 +28,8 @@ the geometrical shapes drawn in it.
 
 ## 4. Webcam Photo Sharer
 
-  Describtion here
+An app that starts the computer webcam, lets the user capture a photo
+and uploads the photo to the web and creates a sharable link.
 
 ## 5. Flatmates-Bill WebApp
 
