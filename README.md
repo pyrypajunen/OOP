@@ -26,31 +26,35 @@ the name of the flatmates and the period.
 squares and rectangles, their dimensions, and their colors, and the program produces an image file canvas with all
 the geometrical shapes drawn in it.
 
-## 4. Webcam Photo Sharer
+## 4. Wikipedia-Photo-Searcher
+
+An app that searches an image from Wikipedia and shows it into a simple the graphical user interface.
+
+## 5. Webcam Photo Sharer
 
 An app that starts the computer webcam, lets the user capture a photo
 and uploads the photo to the web and creates a sharable link.
 
-## 5. Flatmates-Bill WebApp
+## 6. Flatmates-Bill WebApp
 
   Describtion here
 
-## 6. Calorie-Webapp
+## 7. Calorie-Webapp
 
   Describtion here
 
-## 7. Automated-Emails
+## 8. Automated-Emails
 
   Describtion here
 
-## 8. Instant Dictionary WebApp
+## 9. Instant Dictionary WebApp
 
   Describtion here
 
-## 9. Instant Dictionary API
+## 10. Instant Dictionary API
 
   Describtion here
 
-## 10. Cinema Ticket Booking
+## 11. Cinema Ticket Booking
 
   Describtion here
