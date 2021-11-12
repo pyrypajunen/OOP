@@ -1,0 +1,47 @@
+#:kivy 2.0.0
+
+<WebcamScreen>:
+    GridLayout:
+        cols : 1
+        Camera:
+            id: camera
+            resolution: (640,480)
+            size_hint_y: 0.8
+            play: False
+        Button:
+            id: button
+            text : "Start Webcam"
+            size_hint_y: 0.1
+            on_press: root.start_webcam() if root.ids.camera.play == False else root.stop_webcam()
+        Button:
+            text: "Capture"
+            size_hint_y: 0.1
+            on_press: root.capture_method() 
+<PhotoScreen>
+    GridLayout:     
+        cols: 1
+        Image: 
+            id: image
+            size_hint_y: 0.7 
+        Button: 
+            text: "Create Shareble Link"
+            size_hint_y: 0.1
+        Label:
+            text: ""
+        GridLayout: 
+            cols: 2
+            Button: 
+                text: "Copy Link address"
+                size_hint_y: 0.1
+            Button:
+                text: "Open Link"
+                size_hint_y: 0.1
+
+
+<RootWidgets>:
+    WebcamScreen:   
+        id : camera_screen   
+        name : "camera_screen"
+    PhotoScreen:
+        id: photo_screen
+        name : "photo_screen"
