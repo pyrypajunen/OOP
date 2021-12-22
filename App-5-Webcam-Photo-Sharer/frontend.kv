@@ -3,6 +3,8 @@
 <WebcamScreen>:
     GridLayout:
         cols : 1
+        padding : 15
+        spacing : 5
         Camera:
             id: camera
             resolution: (640,480)
@@ -13,29 +15,46 @@
             text : "Start Webcam"
             size_hint_y: 0.1
             on_press: root.start_webcam() if root.ids.camera.play == False else root.stop_webcam()
+            background_normal: 'App-5-Webcam-Photo-Sharer/images/normal.png'
+            background_down: 'App-5-Webcam-Photo-Sharer/images/down.png'
         Button:
             text: "Capture"
             size_hint_y: 0.1
-            on_press: root.capture_method() 
+            on_press: root.capture_method()
+            background_normal: 'App-5-Webcam-Photo-Sharer/images/normal.png'
+            background_down: 'App-5-Webcam-Photo-Sharer/images/down.png' 
+            
 <PhotoScreen>
     GridLayout:     
         cols: 1
+        padding: 15
+        spacing: 5
         Image: 
             id: image
             size_hint_y: 0.7 
         Button: 
             text: "Create Shareble Link"
+            on_press: root.create_link()
             size_hint_y: 0.1
+            background_normal: 'App-5-Webcam-Photo-Sharer/images/normal.png'
+            background_down: 'App-5-Webcam-Photo-Sharer/images/down.png'
         Label:
+            id: link
             text: ""
+            size_hint_y: 0.1
         GridLayout: 
             cols: 2
+            size_hint_y: 0.1
             Button: 
                 text: "Copy Link address"
-                size_hint_y: 0.1
+                on_press: root.copylink()
+                background_normal: 'App-5-Webcam-Photo-Sharer/images/normal.png'
+                background_down: 'App-5-Webcam-Photo-Sharer/images/down.png'
             Button:
                 text: "Open Link"
-                size_hint_y: 0.1
+                on_press: root.open_link()
+                background_normal: 'App-5-Webcam-Photo-Sharer/images/normal.png'
+                background_down: 'App-5-Webcam-Photo-Sharer/images/down.png'
 
 
 <RootWidgets>:
