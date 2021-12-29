@@ -15,12 +15,14 @@ class WebcamScreen(Screen):
     
     def start_webcam(self):
         """Starts camera and change button text"""
+        self.ids.camera.opacity = 1
         self.ids.camera.play = True
         self.ids.button.text = 'Stop Webcam'
         self.ids.camera.texture = self.ids.camera._camera.texture
         
     def stop_webcam(self):
         """Stops the webcam and changes the button text"""
+        self.ids.camera.opacity = 0
         self.ids.camera.play = False
         self.ids.button.text = 'Start Webcam'
         self.ids.camera.texture = None
