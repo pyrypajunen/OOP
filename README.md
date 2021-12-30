@@ -46,12 +46,11 @@ Link for the website: pyrypajunen.pythonanywhere.com
 
 ## 7. Calorie-Webapp
 
-An app that reads user names, email addresses, and interests from an Excel file and sends an email to each user
-with news feeds about the user's interest every morning.
 
 ## 8. Automated-Emails
 
-  Describtion here
+An app that reads user names, email addresses, and interests from an Excel file and sends an email to each user
+with news feeds about the user's interest every morning.
 
 ## 9. Instant Dictionary WebApp
 
