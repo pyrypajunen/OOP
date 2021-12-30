@@ -1,34 +1,25 @@
-### IMPORTS ###
-from flask.views import MethodView
-from wtforms import Form
-from flask import Flask
+from flatmates_bill.flat import Bill, Flatmate
+from flatmates_bill.reports import PdfReport, FileSharer
 
-# Represent a web app
-app = Flask(__name__)
+amount = float(input("Hey user, enter the bill amount: "))
+period = input("What is the bill period? E.g. December 2020: ")
 
-class HomePage(MethodView):
-    
-    def get(self):
-        return "HomePage"
-    
-class BillformPage(MethodView):
-    
-    def get(self):
-        return "Billform page"
+name1 = input("What is your name? ")
+days_in_house1 = int(input(f"How many days did {name1} stay in the house during the bill period? "))
+
+name2 = input("What is the name of the other flatmate? ")
+days_in_house2 = int(input(f"How many days did {name2} stay in the house during the bill period? "))
 
 
-class ResultsPage(MethodView):
-    
-    def get(self):
-        return "This is a result page"
+the_bill = Bill(amount, period)
+flatmate1 = Flatmate(name1, days_in_house1)
+flatmate2 = Flatmate(name2, days_in_house2)
 
-class BillFrom(Form):
-    pass
+print(f"{flatmate1.name} pays: ", flatmate1.pays(the_bill, flatmate2))
+print(f"{flatmate2.name} pays: ", flatmate2.pays(the_bill, flatmate1))
 
+pdf_report = PdfReport(filename=f"{the_bill.period}.pdf")
+pdf_report.generate(flatmate1, flatmate2, the_bill)
 
-app.add_url_rule('/', view_func= HomePage.as_view("home_page"))
-app.add_url_rule('/bill', view_func= BillformPage.as_view("bill_form_page"))
-app.add_url_rule('/result', view_func= ResultsPage.as_view("result_page"))
-
-
-app.run()
+file_sharer = FileSharer(filepath=pdf_report.filename)
+print(file_sharer.share())
