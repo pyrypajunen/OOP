@@ -26,7 +26,7 @@ class Temperature:
     Represent a temperature value extracted from the timeanddate.com/wather webpage.
     """
     
-    yaml_file = r'Apps/App-7-Project-Calorie-Webapp/temperature.yaml'
+    yaml_file = r'App-7-Project-Calorie-Webapp/temperature.yaml'
     web_url = r"https://www.timeanddate.com/weather/"
     
     def __init__(self, country, city):
