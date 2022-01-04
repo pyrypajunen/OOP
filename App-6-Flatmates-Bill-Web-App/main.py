@@ -9,12 +9,12 @@ from flatmates_bill import flat
 app = Flask(__name__)
 
 class HomePage(MethodView):
-    
+    """Create the HomePage view"""
     def get(self):
         return render_template('index.html')
     
 class BillformPage(MethodView):
-    
+    """Create the BillFormPage view"""
     def get(self):
         bill_form = BillForm()
         return render_template('bill_form_page.html', billform= bill_form)
@@ -23,7 +23,7 @@ class BillformPage(MethodView):
 
 
 class ResultsPage(MethodView):
-    
+    """Create the resultspage view"""
     def post(self):
         billform = BillForm(request.form) # object instance for billform
         amount = float(billform.amount.data) # data is the user input
@@ -43,6 +43,7 @@ class ResultsPage(MethodView):
                                amount2 = round(flatmate2.pays(the_bill,flatmate1)))
 
 class BillForm(Form):
+    """Bill form frontend and store user Iiputs"""
     amount = StringField("Bill Amount: ")
     period = StringField("Bill Period: ")
     
