@@ -22,7 +22,7 @@ the name of the flatmates and the period.
   
 ## 3. Project Math Painting
 
-  An app that lets the user provide the start coordinates of geometrical shapes such as
+An app that lets the user provide the start coordinates of geometrical shapes such as
 squares and rectangles, their dimensions, and their colors, and the program produces an image file canvas with all
 the geometrical shapes drawn in it.
 
@@ -37,15 +37,20 @@ and uploads the photo to the web and creates a sharable link.
 
 ## 6. Flatmates-Bill WebApp
 
-  Describtion here
+An app that gets as input the amount of a bill for a particular period
+and the days that each of the flatmates stayed in the house for that period
+and returns how much each flatmate has to pay. It also generates a PDF report
+stating the names of the flatmates, the period, and how much each of them had to pay.
+
+Link for the website: pyrypajunen.pythonanywhere.com 
 
 ## 7. Calorie-Webapp
 
-  Describtion here
 
 ## 8. Automated-Emails
 
-  Describtion here
+An app that reads user names, email addresses, and interests from an Excel file and sends an email to each user
+with news feeds about the user's interest every morning.
 
 ## 9. Instant Dictionary WebApp
 
