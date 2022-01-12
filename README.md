@@ -46,6 +46,9 @@ Link for the website: pyrypajunen.pythonanywhere.com
 
 ## 7. Calorie-Webapp
 
+An app that gets from the user the user's weight, height,
+age, city, and country, and scrapes the temperature of the user's location,
+and calculates how many calories the user needs.
 
 ## 8. Automated-Emails
 
