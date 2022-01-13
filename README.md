@@ -1,5 +1,5 @@
 # OOP   
-This is my Python OOP portfolio. 
+This is my Python OOP portfolio. (In progress)
 # OOP
 
 This is my Python Object Oriented Programming portfolio. This repository includes codes, library requirements and videos of how each application/game works. That is why you don't need to install all the Python libraries that I used to develop these applications.
@@ -46,6 +46,9 @@ Link for the website: pyrypajunen.pythonanywhere.com
 
 ## 7. Calorie-Webapp
 
+An app that gets from the user the user's weight, height,
+age, city, and country, and scrapes the temperature of the user's location,
+and calculates how many calories the user needs.
 
 ## 8. Automated-Emails
 
