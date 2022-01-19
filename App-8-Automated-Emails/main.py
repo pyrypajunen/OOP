@@ -1,39 +1,37 @@
-### import ###
-import requests
-from pprint import pprint
-# API Key: 9a551ad259da4b8daff3011be7314353
+### IMPORTS ###
+import yagmail
+import pandas as pd
+from news import NewsFeed
+import datetime
+import time
 
-        
-class NewsFeed:
-    """Representing multiple news title and links as a single string
+
+
+user = "kurssipyyttoni@gmail.com"
+password = 'Sanako996!"' # Test account, so GDPR is not required.
+
+
+def send_email():
+    """Function to send emails for subscribers daily."
     """
-    base_url = 'http://https://newsapi.org/v2/everything?'
-    api_key = '9a551ad259da4b8daff3011be7314353'
-    
-    def __init__(self, interest,from_date, to_date, language):
-        self.interest = interest
-        self.from_date = from_date
-        self.to_date = to_date
-        self.language = language
-        
-    def get(self):
-        url = f"https://newsapi.org/v2/everything?" \
-            f"qInTitle={self.interest}&" \
-            f"from={self.from_date}&" \
-            f"to={self.to_date}&" \
-            f"language={self.language}&" \
-            f"apiKey={self.api_key}"          
-    
-        response = requests.get(url)
-        content = response.json()
-        articles = content['articles']
+    today = datetime.datetime.now().strftime("%Y-%m-%d")
+    yesterday = datetime.datetime.now() - datetime.timedelta(days=1)
+            
+    news_feed = NewsFeed(interest = row["interest"], 
+                        from_date= yesterday.strftime("%Y-%m-%d"), 
+                        to_date= today)
+                   
+    email = yagmail.SMTP(user=user, password=password)
+    email.send(to=row["email"],
+                    subject= f" Your {row['interest']} news for today!",
+                    contents= f"Hi {row['name']} \n\n See what's on about {row['interest']} today. {news_feed.get()}\n Regards, \nPyry")
 
-        email_body = ""
-        for article in articles: # -> list of dicts
-            email_body = email_body + article['title'] + "\n" + article['url'] + "\n\n"
-    
-        return email_body
+while True:
+    if datetime.datetime.now().hour == 14 and datetime.datetime.now().minute == 33:
+        print("Executing!")
+        dataframe = pd.read_excel(r"App-8-Automated-Emails/people.xlsx")
 
-
-news_feed = NewsFeed(interest="nasa", from_date="2022-11-1", to_date="2022-11-1", language="en")
-print(news_feed.get())
+        for index, row in dataframe.iterrows():
+            send_email()
+    time.sleep(60)
+          
