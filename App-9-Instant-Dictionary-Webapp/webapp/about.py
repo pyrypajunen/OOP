@@ -4,7 +4,7 @@ from webapp.page import Page
 import justpy as jp
 
 class About(Page):
-    """comment here
+    """This class creates a about page.
     """
     path = "/about"
     

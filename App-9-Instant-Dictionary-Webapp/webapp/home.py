@@ -4,7 +4,7 @@ from webapp.layout import Layout
 from webapp.page import Page
 
 class Home(Page):
-    """Home page created by Quasars' layouts
+    """Home page implementation.
     """
     path = "/"
 
