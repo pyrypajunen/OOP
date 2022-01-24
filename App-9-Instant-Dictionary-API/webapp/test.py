@@ -1,7 +1,7 @@
 class D:
     
     @classmethod
-    def method(self): #self = class itself, not class instance 
-        print(self
+    def method(cls): #cls = class itself, not class instance, self = instance of the class
+        print(cls)
         
 D.method()
