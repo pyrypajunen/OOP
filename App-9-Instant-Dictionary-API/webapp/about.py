@@ -16,6 +16,7 @@ class About:
                text   text
                text
               """, classes="text-lg")
+
        return wp
 
     

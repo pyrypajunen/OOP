@@ -1,8 +1,7 @@
 class D:
     
     @classmethod
-    def serve(self):
-        print(self)
+    def method(self): #self = class itself, not class instance 
+        print(self
         
-D().serve()
-        
+D.method()
