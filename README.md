@@ -1,5 +1,5 @@
 # OOP   
-This is my Python OOP portfolio. (In progress)
+This is my Python OOP portfolio.
 # OOP
 
 This is my Python Object Oriented Programming portfolio. This repository includes codes, library requirements and videos of how each application/game works. That is why you don't need to install all the Python libraries that I used to develop these applications.
@@ -61,7 +61,7 @@ A web app that lets users type in a term in a text box and returns the English d
 
 ## 10. Instant Dictionary API
 
-Creating very simple API
+Creating very simple API.
 
 ## 11. Cinema Ticket Booking
 
