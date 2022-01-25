@@ -61,8 +61,8 @@ A web app that lets users type in a term in a text box and returns the English d
 
 ## 10. Instant Dictionary API
 
-  Describtion here
+Creating very simple API
 
 ## 11. Cinema Ticket Booking
 
-  Describtion here
+An app where a user can book a cinema seat if the seat is free and if the user has balance in their card. The app generates a PDF ticket if the purchase is successful.
