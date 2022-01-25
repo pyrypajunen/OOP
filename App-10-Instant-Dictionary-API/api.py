@@ -20,7 +20,7 @@ class Api:
             "definition": defined
         }
         
-        # converting as as string  
+        # converting as as json  
         wp.html = json.dumps(response)
         return wp
     
