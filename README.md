@@ -1,5 +1,5 @@
 # OOP   
-This is my Python OOP portfolio.
+This is my python OOP portfolio.
 # OOP
 
 This is my Python Object Oriented Programming portfolio. This repository includes codes nadlibrary requirements. That is why you don't need to install all the Python libraries that I used to develop these applications.
