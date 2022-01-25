@@ -57,7 +57,7 @@ A web app that lets users type in a term in a text box and returns the English d
 
 ## 10. Instant Dictionary API
 
-Creating very simple API.
+Creating a very simple API.
 
 ## 11. Cinema Ticket Booking
 
