@@ -8,6 +8,7 @@ class About(Page):
     """
     path = "/about"
     
+    @classmethod
     def serve(self):
        wp = jp.QuasarPage(tailwind=True)
        
