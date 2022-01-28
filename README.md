@@ -1,6 +1,5 @@
-# OOP   
-This is my python OOP portfolio.
-# OOP
+
+# Object Oriented Programming
 
 This is my Python Object Oriented Programming portfolio. This repository includes codes and library requirements.
 
