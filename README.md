@@ -23,7 +23,7 @@ the geometrical shapes drawn in it.
 
 ## 4. Wikipedia-Photo-Searcher
 
-An app that searches an image from Wikipedia and shows it into a simple the graphical user interface.
+An app that searches an image from Wikipedia and shows it on the graphical user interface.
 
 ## 5. Webcam Photo Sharer
 
